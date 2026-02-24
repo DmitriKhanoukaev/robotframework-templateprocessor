@@ -1,0 +1,30 @@
+# Test template with multiple independent loops
+# Test ID: gen_file_template_5
+# Generated at: 2026-02-20 15:08:29
+
+## First Loop - Processing Items
+Item 0: Alpha - Value: 100.0
+  Detail: DetailA
+Item 1: Beta - Value: 110.0
+  Detail: DetailB
+Item 2: Gamma - Value: 120.0
+  Detail: DetailC
+
+## Second Loop - Processing Categories
+Category 0: CAT1 - Code: 200.0
+  Name: Category-One
+Category 1: CAT2 - Code: 205.0
+  Name: Category-Two
+
+## Third Loop - Processing Status Entries
+Status[0]: 0 = Active
+Status[1]: 1 = Inactive
+Status[2]: 2 = Pending
+Status[3]: 3 = Complete
+
+# Global counter test
+Counter: 1.0
+Counter: 1.5
+Counter: 2.0
+
+# End of file

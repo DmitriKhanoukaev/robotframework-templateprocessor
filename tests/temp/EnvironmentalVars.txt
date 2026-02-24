@@ -1,0 +1,31 @@
+# Test template for Environmental and Robot Framework Variables
+# Test ID: gen_file_template_13
+
+## Testing Variable Substitution
+
+### Suite-level Variables (accessible via Replace Variables)
+Data directory: /home/khanoud/temp/Generators/tests/data/
+Temp directory: /home/khanoud/temp/Generators/tests/temp/
+
+### Test-level Variables (passed as CONSTANT parameters)
+Environment name: Production
+Config path: /etc/config/app.conf
+Service name: MyTestService
+
+### Mixed Variables and Template Placeholders
+Generated at: 2026-02-20 15:08:29
+Service MyTestService in Production environment
+Config location: /etc/config/app.conf
+Test ID from constant: gen_file_template_13
+Counter value: 1.0
+
+### Loop with CONSTANT parameters
+Item 0 in Production: Item-1 (from /etc/config/app.conf)
+Item 1 in Production: Item-2 (from /etc/config/app.conf)
+Item 2 in Production: Item-3 (from /etc/config/app.conf)
+
+### Suite variables mixed with CONSTANT parameters
+Description: Service MyTestService running in Production
+Data path is: /home/khanoud/temp/Generators/tests/data/
+
+# End of file

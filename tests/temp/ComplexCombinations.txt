@@ -1,0 +1,24 @@
+# Complex Combinations Test
+ID: gen_file_template_14 | Time: 15:08:29
+
+# Global INC counters
+Global-A: 10.0
+Global-B: 100.0
+
+# Loop 1: Mix of CONSTANT, NOW, INC inside loop
+[0] TestCategory at 15:08 - Count: 1.0 - Value: Alpha
+[1] TestCategory at 15:08 - Count: 2.0 - Value: Beta
+
+# Global counters continue
+Global-A: 15.0
+Global-B: 150.0
+
+# Loop 2: LOOPINC + LOOPLIST + CONSTANT
+Item 0: TAG-1 | Inc: 0.5 | Cat: TestCategory
+Item 1: TAG-2 | Inc: 0.6 | Cat: TestCategory
+Item 2: TAG-3 | Inc: 0.7 | Cat: TestCategory
+
+# Final global counters
+Global-A: 20.0
+Global-B: 200.0
+Global-C: 1.0

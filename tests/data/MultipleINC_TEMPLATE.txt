@@ -1,0 +1,46 @@
+# Test template with multiple independent INC counters
+# Test ID: %%%CONSTANT@ID%%%
+# Generated at: %%%NOW@0@%Y-%m-%d %H:%M:%S%%%
+
+## Testing Multiple INC Counters with Different Parameters
+
+### Counter A - Starting at 1.0, increment by 0.5
+Value A1: %%%INC@1.0@0.5%%%
+Value A2: %%%INC@1.0@0.5%%%
+Value A3: %%%INC@1.0@0.5%%%
+Value A4: %%%INC@1.0@0.5%%%
+
+### Counter B - Starting at 100, increment by 10
+Value B1: %%%INC@100@10%%%
+Value B2: %%%INC@100@10%%%
+Value B3: %%%INC@100@10%%%
+
+### Counter C - Starting at 0.001, increment by 0.001 (precision test)
+Value C1: %%%INC@0.001@0.001%%%
+Value C2: %%%INC@0.001@0.001%%%
+Value C3: %%%INC@0.001@0.001%%%
+Value C4: %%%INC@0.001@0.001%%%
+Value C5: %%%INC@0.001@0.001%%%
+
+### Counter D - Starting at 50.25, increment by 0.25
+Value D1: %%%INC@50.25@0.25%%%
+Value D2: %%%INC@50.25@0.25%%%
+
+### Interleaved - All counters used in sequence
+Mixed A: %%%INC@1.0@0.5%%%
+Mixed B: %%%INC@100@10%%%
+Mixed C: %%%INC@0.001@0.001%%%
+Mixed D: %%%INC@50.25@0.25%%%
+Mixed A: %%%INC@1.0@0.5%%%
+Mixed B: %%%INC@100@10%%%
+Mixed C: %%%INC@0.001@0.001%%%
+
+### Counter E - Integer increments starting from 1000
+Value E1: %%%INC@1000@5%%%
+Value E2: %%%INC@1000@5%%%
+Value E3: %%%INC@1000@5%%%
+
+# Final verification - Counter A should continue from where it left off
+Final A: %%%INC@1.0@0.5%%%
+
+# End of file

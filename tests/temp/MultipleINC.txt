@@ -1,0 +1,46 @@
+# Test template with multiple independent INC counters
+# Test ID: gen_file_template_6
+# Generated at: 2026-02-20 15:08:29
+
+## Testing Multiple INC Counters with Different Parameters
+
+### Counter A - Starting at 1.0, increment by 0.5
+Value A1: 1.0
+Value A2: 1.5
+Value A3: 2.0
+Value A4: 2.5
+
+### Counter B - Starting at 100, increment by 10
+Value B1: 100.0
+Value B2: 110.0
+Value B3: 120.0
+
+### Counter C - Starting at 0.001, increment by 0.001 (precision test)
+Value C1: 0.001
+Value C2: 0.002
+Value C3: 0.003
+Value C4: 0.004
+Value C5: 0.005
+
+### Counter D - Starting at 50.25, increment by 0.25
+Value D1: 50.25
+Value D2: 50.5
+
+### Interleaved - All counters used in sequence
+Mixed A: 3.0
+Mixed B: 130.0
+Mixed C: 0.006
+Mixed D: 50.75
+Mixed A: 3.5
+Mixed B: 140.0
+Mixed C: 0.007
+
+### Counter E - Integer increments starting from 1000
+Value E1: 1000.0
+Value E2: 1005.0
+Value E3: 1010.0
+
+# Final verification - Counter A should continue from where it left off
+Final A: 4.0
+
+# End of file

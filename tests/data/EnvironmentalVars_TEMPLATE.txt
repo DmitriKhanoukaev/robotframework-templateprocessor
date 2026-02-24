@@ -1,0 +1,31 @@
+# Test template for Environmental and Robot Framework Variables
+# Test ID: %%%CONSTANT@ID%%%
+
+## Testing Variable Substitution
+
+### Suite-level Variables (accessible via Replace Variables)
+Data directory: ${Data}
+Temp directory: ${Temppath}
+
+### Test-level Variables (passed as CONSTANT parameters)
+Environment name: %%%CONSTANT@TEST_ENV%%%
+Config path: %%%CONSTANT@CONFIG_PATH%%%
+Service name: %%%CONSTANT@SERVICE_NAME%%%
+
+### Mixed Variables and Template Placeholders
+Generated at: %%%NOW@0@%Y-%m-%d %H:%M:%S%%%
+Service %%%CONSTANT@SERVICE_NAME%%% in %%%CONSTANT@TEST_ENV%%% environment
+Config location: %%%CONSTANT@CONFIG_PATH%%%
+Test ID from constant: %%%CONSTANT@ID%%%
+Counter value: %%%INC@1.0@1.0%%%
+
+### Loop with CONSTANT parameters
+%%%LOOP@ITEMS@itemloop%%%
+Item %%%INDEX%%% in %%%CONSTANT@TEST_ENV%%%: %%%itemloop.VALUE%%% (from %%%CONSTANT@CONFIG_PATH%%%)
+%%%LOOP@END@itemloop%%%
+
+### Suite variables mixed with CONSTANT parameters
+Description: %%%CONSTANT@DESCRIPTION%%%
+Data path is: ${Data}
+
+# End of file

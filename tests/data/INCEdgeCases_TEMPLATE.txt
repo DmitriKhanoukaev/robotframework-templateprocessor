@@ -1,0 +1,76 @@
+# Test template for INC and LOOPINC edge cases
+# Test ID: %%%CONSTANT@ID%%%
+
+## Testing INC Edge Cases
+
+### Test 1: Zero Increment (should stay at base value)
+Zero increment A: %%%INC@10.0@0%%%
+Zero increment B: %%%INC@10.0@0%%%
+Zero increment C: %%%INC@10.0@0%%%
+
+### Test 2: Very Small Increment (High Precision)
+Tiny increment 1: %%%INC@0.0@0.0001%%%
+Tiny increment 2: %%%INC@0.0@0.0001%%%
+Tiny increment 3: %%%INC@0.0@0.0001%%%
+Tiny increment 4: %%%INC@0.0@0.0001%%%
+Tiny increment 5: %%%INC@0.0@0.0001%%%
+
+### Test 3: Very Large Base Values
+Large base 1: %%%INC@1000000@100000%%%
+Large base 2: %%%INC@1000000@100000%%%
+Large base 3: %%%INC@1000000@100000%%%
+
+### Test 4: Negative Increments
+Negative inc 1: %%%INC@100@-5%%%
+Negative inc 2: %%%INC@100@-5%%%
+Negative inc 3: %%%INC@100@-5%%%
+Negative inc 4: %%%INC@100@-5%%%
+
+### Test 5: Decimal Base with Decimal Increment
+Decimal 1: %%%INC@0.5@0.125%%%
+Decimal 2: %%%INC@0.5@0.125%%%
+Decimal 3: %%%INC@0.5@0.125%%%
+Decimal 4: %%%INC@0.5@0.125%%%
+
+### Test 6: Negative Base with Positive Increment
+Negative base 1: %%%INC@-50@10%%%
+Negative base 2: %%%INC@-50@10%%%
+Negative base 3: %%%INC@-50@10%%%
+
+### Test 7: Negative Base with Negative Increment
+Double negative 1: %%%INC@-10@-3%%%
+Double negative 2: %%%INC@-10@-3%%%
+Double negative 3: %%%INC@-10@-3%%%
+
+## Testing LOOPINC Edge Cases
+
+### Test 8: LOOPINC with Zero Increment
+%%%LOOP@ZEROLOOP@loopzero%%%
+Item %%%INDEX%%%: Counter with zero inc: %%%LOOPINC@5.0@0%%%
+%%%LOOP@END@loopzero%%%
+
+### Test 9: LOOPINC with Very Small Increment
+%%%LOOP@TINYLOOP@looptiny%%%
+Item %%%INDEX%%%: Tiny counter: %%%LOOPINC@1.0@0.0001%%%
+%%%LOOP@END@looptiny%%%
+
+### Test 10: LOOPINC with Negative Increment
+%%%LOOP@NEGLOOP@loopneg%%%
+Item %%%INDEX%%%: Negative counter: %%%LOOPINC@100@-5%%%
+%%%LOOP@END@loopneg%%%
+
+### Test 11: LOOPINC with Large Values
+%%%LOOP@LARGELOOP@looplarge%%%
+Item %%%INDEX%%%: Large counter: %%%LOOPINC@9999999@1000000%%%
+%%%LOOP@END@looplarge%%%
+
+### Test 12: Multiple LOOPINC with Different Edge Cases in Same Loop
+%%%LOOP@MIXLOOP@loopmix%%%
+Record %%%INDEX%%%:
+  Zero inc: %%%LOOPINC@10@0%%%
+  Tiny inc: %%%LOOPINC@0@0.0001%%%
+  Negative inc: %%%LOOPINC@50@-2%%%
+  Large inc: %%%LOOPINC@1000000@500000%%%
+%%%LOOP@END@loopmix%%%
+
+# End of file

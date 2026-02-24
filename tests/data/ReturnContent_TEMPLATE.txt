@@ -1,0 +1,19 @@
+# Test template for Generate File And Return Content keyword
+# Test ID: %%%CONSTANT@ID%%%
+
+## Testing Content Return
+
+Generated at: %%%NOW@0@%Y-%m-%d %H:%M:%S%%%
+Description: %%%CONSTANT@DESCRIPTION%%%
+
+### Sample Data
+Counter 1: %%%INC@1.0@1.0%%%
+Counter 2: %%%INC@1.0@1.0%%%
+Counter 3: %%%INC@1.0@1.0%%%
+
+### Loop Section
+%%%LOOP@ITEMS@itemloop%%%
+Item %%%INDEX%%%: %%%itemloop.VALUE%%% - Value: %%%LOOPINC@100@10%%%
+%%%LOOP@END@itemloop%%%
+
+# End of content

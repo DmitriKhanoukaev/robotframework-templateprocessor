@@ -1,0 +1,19 @@
+# Development dependencies for Robot Framework Template Processor
+
+# Testing
+pytest>=7.0
+pytest-cov>=4.0
+robotframework>=4.0
+
+# Code quality
+flake8>=6.0
+black>=23.0
+pylint>=2.17
+
+# Documentation
+sphinx>=5.0
+sphinx-rtd-theme>=1.2
+
+# Build tools
+build>=0.10
+twine>=4.0

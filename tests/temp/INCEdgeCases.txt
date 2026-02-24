@@ -1,0 +1,86 @@
+# Test template for INC and LOOPINC edge cases
+# Test ID: gen_file_template_11
+
+## Testing INC Edge Cases
+
+### Test 1: Zero Increment (should stay at base value)
+Zero increment A: 10.0
+Zero increment B: 10.0
+Zero increment C: 10.0
+
+### Test 2: Very Small Increment (High Precision)
+Tiny increment 1: 0.0
+Tiny increment 2: 0.0001
+Tiny increment 3: 0.0002
+Tiny increment 4: 0.0003
+Tiny increment 5: 0.0004
+
+### Test 3: Very Large Base Values
+Large base 1: 1000000.0
+Large base 2: 1100000.0
+Large base 3: 1200000.0
+
+### Test 4: Negative Increments
+Negative inc 1: 100.0
+Negative inc 2: 95.0
+Negative inc 3: 90.0
+Negative inc 4: 85.0
+
+### Test 5: Decimal Base with Decimal Increment
+Decimal 1: 0.5
+Decimal 2: 0.625
+Decimal 3: 0.75
+Decimal 4: 0.875
+
+### Test 6: Negative Base with Positive Increment
+Negative base 1: -50.0
+Negative base 2: -40.0
+Negative base 3: -30.0
+
+### Test 7: Negative Base with Negative Increment
+Double negative 1: -10.0
+Double negative 2: -13.0
+Double negative 3: -16.0
+
+## Testing LOOPINC Edge Cases
+
+### Test 8: LOOPINC with Zero Increment
+Item 0: Counter with zero inc: 5.0
+Item 1: Counter with zero inc: 5.0
+Item 2: Counter with zero inc: 5.0
+
+### Test 9: LOOPINC with Very Small Increment
+Item 0: Tiny counter: 1.0
+Item 1: Tiny counter: 1.0001
+Item 2: Tiny counter: 1.0002
+Item 3: Tiny counter: 1.0003
+Item 4: Tiny counter: 1.0004
+
+### Test 10: LOOPINC with Negative Increment
+Item 0: Negative counter: 100.0
+Item 1: Negative counter: 95.0
+Item 2: Negative counter: 90.0
+Item 3: Negative counter: 85.0
+
+### Test 11: LOOPINC with Large Values
+Item 0: Large counter: 9999999.0
+Item 1: Large counter: 10999999.0
+
+### Test 12: Multiple LOOPINC with Different Edge Cases in Same Loop
+Record 0:
+  Zero inc: 10.0
+  Tiny inc: 0.0
+  Negative inc: 50.0
+  Large inc: 1000000.0
+Record 1:
+  Zero inc: 10.0
+  Tiny inc: 0.0001
+  Negative inc: 48.0
+  Large inc: 1500000.0
+Record 2:
+  Zero inc: 10.0
+  Tiny inc: 0.0002
+  Negative inc: 46.0
+  Large inc: 2000000.0
+
+# End of file

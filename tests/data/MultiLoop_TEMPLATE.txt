@@ -1,0 +1,27 @@
+# Test template with multiple independent loops
+# Test ID: %%%CONSTANT@ID%%%
+# Generated at: %%%NOW@0@%Y-%m-%d %H:%M:%S%%%
+
+## First Loop - Processing Items
+%%%LOOP@LOOP1INPUT@loop1%%%
+Item %%%INDEX%%%: %%%loop1.VALUE%%% - Value: %%%LOOPINC@100@10%%%
+  Detail: %%%LOOPLIST@DETAILS1%%%
+%%%LOOP@END@loop1%%%
+
+## Second Loop - Processing Categories
+%%%LOOP@LOOP2INPUT@loop2%%%
+Category %%%INDEX%%%: %%%loop2.VALUE%%% - Code: %%%LOOPINC@200@5%%%
+  Name: %%%LOOPLIST@NAMES2%%%
+%%%LOOP@END@loop2%%%
+
+## Third Loop - Processing Status Entries
+%%%LOOP@LOOP3INPUT@loop3%%%
+Status[%%%INDEX%%%]: %%%loop3.VALUE%%% = %%%LOOPLIST@STATUS3%%%
+%%%LOOP@END@loop3%%%
+
+# Global counter test
+Counter: %%%INC@1.0@0.5%%%
+Counter: %%%INC@1.0@0.5%%%
+Counter: %%%INC@1.0@0.5%%%
+
+# End of file

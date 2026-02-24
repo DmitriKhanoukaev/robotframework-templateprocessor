@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotframework-templateprocessor"
+version = "1.0.0"
+description = "Robot Framework library for generating test data files from templates with dynamic content"
+readme = "README.md"
+authors = [
+    {name = "Robot Framework Template Processor Contributors"}
+]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Robot Framework",
+    "Framework :: Robot Framework :: Library",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: Acceptance",
+    "Intended Audience :: Developers",
+]
+keywords = ["robotframework", "testing", "test automation", "template", "data generation"]
+requires-python = ">=3.8"
+dependencies = [
+    "robotframework>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/MarketSquare/robotframework-templateprocessor"
+Documentation = "https://github.com/MarketSquare/robotframework-templateprocessor#readme"
+Repository = "https://github.com/MarketSquare/robotframework-templateprocessor.git"
+Issues = "https://github.com/MarketSquare/robotframework-templateprocessor/issues"
+Changelog = "https://github.com/MarketSquare/robotframework-templateprocessor/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "robotframework>=4.0",
+]
+
+[tool.setuptools]
+packages = ["TemplateProcessorLibrary"]
+include-package-data = true
+
+[tool.setuptools.package-dir]
+"" = "."
+
+[tool.setuptools.package-data]
+TemplateProcessorLibrary = ["*.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "tests/*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]

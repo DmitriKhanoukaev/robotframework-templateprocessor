@@ -1,0 +1,13 @@
+# Test template for Negative INDEXSHIFT edge case
+# Test ID: gen_file_template_10
+
+## Testing Negative INDEXSHIFT
+
+### Loop with INDEXSHIFT=-5
+Loop with negative INDEXSHIFT applied:
+Index -5 = Value Item1
+Index -4 = Value Item2
+Index -3 = Value Item3
+Index -2 = Value Item4
+
+# End of file

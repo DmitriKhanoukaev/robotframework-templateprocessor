@@ -1,0 +1,26 @@
+# Nested Loops Test
+ID: %%%CONSTANT@ID%%%
+
+# Outer loop with nested inner loop using INDEX
+%%%LOOP@OUTERLOOP@outer%%%
+Outer[%%%INDEX%%%]: %%%outer.VALUE%%%
+%%%LOOP@INNERLOOP@inner%%%
+Inner[%%%INDEX%%%]: %%%inner.VALUE%%% in %%%outer.VALUE%%% - Count: %%%LOOPINC@1@1%%% %%%LOOP@END@inner%%% %%%LOOP@END@outer%%%
+
+# Outer loop with nested inner loop using inner.INDEX
+%%%LOOP@OUTERLOOP@outer%%%
+Outer[%%%INDEX%%%]: %%%outer.VALUE%%%
+  %%%LOOP@INNERLOOP@inner%%%
+  Inner[%%%inner.INDEX%%%]: %%%inner.VALUE%%% in %%%outer.VALUE%%% - Count: %%%LOOPINC@1@1%%%%%%LOOP@END@inner%%%
+%%%LOOP@END@outer%%%
+
+# Outer loop with nested inner loop using outer.INDEX
+%%%LOOP@OUTERLOOP@outer%%%
+Outer[%%%INDEX%%%]: %%%outer.VALUE%%%
+  %%%LOOP@INNERLOOP@inner%%%
+  Inner[%%%outer.INDEX%%%]: %%%inner.VALUE%%% in %%%outer.VALUE%%% - Count: %%%LOOPINC@1@1%%%
+  %%%LOOP@END@inner%%%
+%%%LOOP@END@outer%%%
+
+
+# Done

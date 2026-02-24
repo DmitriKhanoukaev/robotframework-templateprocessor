@@ -1,0 +1,8 @@
+# Template with mismatched LOOPLIST lengths
+# Test ID: %%%CONSTANT@ID%%%
+
+%%%LOOP@LOOPINPUT@testloop%%%
+Item %%%INDEX%%%: %%%testloop.VALUE%%%
+List1: %%%LOOPLIST@LIST1%%%
+List2: %%%LOOPLIST@LIST2%%%
+%%%LOOP@END@testloop%%%

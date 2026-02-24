@@ -1,0 +1,4 @@
+# Template with missing CONSTANT
+# Test ID: %%%CONSTANT@ID%%%
+# This template references a CONSTANT that won't be provided
+Missing constant: %%%CONSTANT@MISSING_CONSTANT%%%

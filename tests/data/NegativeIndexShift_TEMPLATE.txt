@@ -1,0 +1,12 @@
+# Test template for Negative INDEXSHIFT edge case
+# Test ID: %%%CONSTANT@ID%%%
+
+## Testing Negative INDEXSHIFT
+
+### Loop with INDEXSHIFT=-5
+Loop with negative INDEXSHIFT applied:
+%%%LOOP@TESTLOOP@looptest%%%
+Index %%%INDEX%%% = Value %%%looptest.VALUE%%%
+%%%LOOP@END@looptest%%%
+
+# End of file

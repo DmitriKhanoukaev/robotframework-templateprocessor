@@ -1,0 +1,8 @@
+#
+# Hello
+#
+Test id is %%%CONSTANT@ID%%%.
+You ran this test at %%%NOW@0@%Y.%m.%d %H:%M:%S%%% using template in directory ${Data}
+Note that 4 days ago time was percisely %%%NOW@-4@%Y.%m.%d %H:%M:%S%%%
+Note that 2 months ago time was percisely %%%MONTHDELTA@-2@%Y.%m.%d %H:%M:%S%%%
+One month from now sharp time will be %%%MONTHDELTA@1@%Y.%m.%d %H:%M:%S%%%

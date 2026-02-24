@@ -1,0 +1,7 @@
+# Template for testing LOOPLIST that is not a list
+# Test ID: %%%CONSTANT@ID%%%
+
+%%%LOOP@LOOPINPUT@testloop%%%
+Item %%%INDEX%%%: %%%testloop.VALUE%%%
+Bad List: %%%LOOPLIST@BADLIST%%%
+%%%LOOP@END@testloop%%%

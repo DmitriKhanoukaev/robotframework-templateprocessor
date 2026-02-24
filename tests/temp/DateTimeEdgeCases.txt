@@ -1,0 +1,54 @@
+# Test template for Date/Time edge cases
+# Test ID: gen_file_template_8
+
+## Testing Date/Time Edge Cases
+
+### Zero Offsets
+NOW with zero offset: 2026-02-20 15:08:29
+MONTHDELTA with zero offset: 2026-02-20 15:08:29
+
+### Large Positive Offsets
+NOW +365 days (1 year ahead): 2027-02-20
+NOW +730 days (2 years ahead): 2028-02-20
+MONTHDELTA +24 months (2 years ahead): 2028-02-20
+MONTHDELTA +60 months (5 years ahead): 2031-02
+
+### Large Negative Offsets
+NOW -365 days (1 year ago): 2025-02-20
+NOW -1095 days (3 years ago): 2023-02-21
+MONTHDELTA -24 months (2 years ago): 2024-02-20
+MONTHDELTA -36 months (3 years ago): 2023-02
+
+### Various Date Format Strings
+ISO 8601 basic: 20260220
+ISO 8601 extended: 2026-02-20T15:08:29
+ISO 8601 with timezone: 2026-02-20T15:08:29+00:00
+Unix timestamp style: 20260220150829
+Human readable: Friday, February 20, 2026
+Date only: 2026-02-20
+Time only: 15:08:29
+Year and month: 2026-02
+Month and day: 02-20
+Custom format 1: 20/02/2026 15:08
+Custom format 2: 2026.02.20.15.08.29
+Custom format 3: February 20, 2026 at 03:08 PM
+
+### MONTHDELTA with Various Formats
+Month delta ISO: 2026-08-20T15:08:29+01:00
+Month delta basic: 20251120
+Month delta date only: 2027-02-20
+Month delta first of month: 2026-03-01T00:00:00Z
+
+### Combined Edge Cases
+Far future NOW: 2036-02-18 (10 years ahead)
+Far past NOW: 2016-02-23 (10 years ago)
+Far future MONTHDELTA: 2036-02 (10 years ahead)
+Far past MONTHDELTA: 2016-02 (10 years ago)
+
+### Boundary Testing
+Small positive offset: 2026-02-21
+Small negative offset: 2026-02-19
+MONTHDELTA +1: 2026-03-01
+MONTHDELTA -1: 2026-01-01
+
+# End of file

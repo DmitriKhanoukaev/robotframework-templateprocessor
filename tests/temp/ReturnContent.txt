@@ -1,0 +1,19 @@
+# Test template for Generate File And Return Content keyword
+# Test ID: gen_file_template_12
+
+## Testing Content Return
+
+Generated at: 2026-02-20 15:08:29
+Description: Testing content return functionality
+
+### Sample Data
+Counter 1: 1.0
+Counter 2: 2.0
+Counter 3: 3.0
+
+### Loop Section
+Item 0: Product-A - Value: 100.0
+Item 1: Product-B - Value: 110.0
+Item 2: Product-C - Value: 120.0
+
+# End of content

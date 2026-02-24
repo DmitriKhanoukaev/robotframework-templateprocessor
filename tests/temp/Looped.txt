@@ -1,0 +1,21 @@
+Record created for gen_file_template_3
+Loop index: 1
+Loop value: 0
+Loop increment: 2.1
+Loop list goes here: ABC
+Loop list goes here: 333
+Record created for gen_file_template_3
+Loop index: 2
+Loop value: 1
+Loop increment: 2.3
+Loop list goes here: DEF
+Loop list goes here: 444
+Record created for gen_file_template_3
+Loop index: 3
+Loop value: 2
+Loop increment: 2.5
+Loop list goes here: XYZ
+Loop list goes here: 555
+1.1 - will be replaced with 1.1
+1.101 - will be replaced with 1.101
+1.102 - will be replaced with 1.102

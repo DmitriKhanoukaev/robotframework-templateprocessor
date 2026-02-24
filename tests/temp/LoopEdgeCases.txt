@@ -1,0 +1,129 @@
+# Test template for Loop edge cases
+# Test ID: gen_file_template_9
+
+## Testing Loop Edge Cases
+
+### Test 1: Empty Loop (Zero Iterations)
+Loop with 0 iterations starts here:
+
+Loop with 0 iterations ends here.
+
+### Test 2: Single Iteration Loop
+Single iteration loop:
+Record 10: 0 - Counter: 1.0
+
+### Test 3: Large Loop (100 iterations)
+Large loop with 100 iterations (showing first 10 chars per line):
+[10]
+[11]
+[12]
+[13]
+[14]
+[15]
+[16]
+[17]
+[18]
+[19]
+[20]
+[21]
+[22]
+[23]
+[24]
+[25]
+[26]
+[27]
+[28]
+[29]
+[30]
+[31]
+[32]
+[33]
+[34]
+[35]
+[36]
+[37]
+[38]
+[39]
+[40]
+[41]
+[42]
+[43]
+[44]
+[45]
+[46]
+[47]
+[48]
+[49]
+[50]
+[51]
+[52]
+[53]
+[54]
+[55]
+[56]
+[57]
+[58]
+[59]
+[60]
+[61]
+[62]
+[63]
+[64]
+[65]
+[66]
+[67]
+[68]
+[69]
+[70]
+[71]
+[72]
+[73]
+[74]
+[75]
+[76]
+[77]
+[78]
+[79]
+[80]
+[81]
+[82]
+[83]
+[84]
+[85]
+[86]
+[87]
+[88]
+[89]
+[90]
+[91]
+[92]
+[93]
+[94]
+[95]
+[96]
+[97]
+[98]
+[99]
+[100]
+[101]
+[102]
+[103]
+[104]
+[105]
+[106]
+[107]
+[108]
+[109]
+
+### Test 4: Loop with INDEXSHIFT (applies to all loops in template)
+Loop with INDEXSHIFT applied:
+Index 10 = Value Alpha
+Index 11 = Value Beta
+Index 12 = Value Gamma
+
+### Test 5: Loop with LOOPLIST Edge Cases
+Loop with synchronized multiple LOOPLISTs:
+Position 10 | ID: ID1 | Tag: TAG-A | Status: Active
+Position 11 | ID: ID2 | Tag: TAG-B | Status: Pending
+
+# End of file

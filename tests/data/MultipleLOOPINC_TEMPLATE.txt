@@ -1,0 +1,27 @@
+# Test template with multiple LOOPINC counters in same loop
+# Test ID: %%%CONSTANT@ID%%%
+# Generated at: %%%NOW@0@%Y-%m-%d %H:%M:%S%%%
+
+## Testing Multiple LOOPINC Counters within Single Loop
+
+### Loop with Multiple Independent LOOPINC Counters
+%%%LOOP@MYLOOPINPUT@dataloop%%%
+Record %%%INDEX%%%:
+  ID: %%%dataloop.VALUE%%%
+  Counter Alpha: %%%LOOPINC@10.0@1.5%%%
+  Counter Beta: %%%LOOPINC@100@25%%%
+  Counter Gamma: %%%LOOPINC@0.5@0.05%%%
+  Counter Delta: %%%LOOPINC@1000@100%%%
+  Item: %%%LOOPLIST@ITEMS%%%
+  ----
+%%%LOOP@END@dataloop%%%
+
+## Summary Information
+Total records processed: %%%CONSTANT@RECORDCOUNT%%%
+
+# Global INC counter (should work independently from LOOPINC)
+Global: %%%INC@5.0@0.1%%%
+Global: %%%INC@5.0@0.1%%%
+Global: %%%INC@5.0@0.1%%%
+
+# End of file

@@ -1,0 +1,8 @@
+#
+# Hello
+#
+Test id is gen_file_template_2.
+You ran this test at 2026.02.20 15:08:29 using template in directory ${Data}
+Note that 4 days ago time was percisely 2026.02.16 15:08:29
+Note that 2 months ago time was percisely 2025.12.20 15:08:29
+One month from now sharp time will be 2026.03.20 15:08:29

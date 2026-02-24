@@ -1,0 +1,25 @@
+# Complex Combinations Test
+ID: %%%CONSTANT@ID%%% | Time: %%%NOW@0@%H:%M:%S%%%
+
+# Global INC counters
+Global-A: %%%INC@10@5%%%
+Global-B: %%%INC@100@50%%%
+
+# Loop 1: Mix of CONSTANT, NOW, INC inside loop
+%%%LOOP@LOOP1@loop1%%%
+[%%%INDEX%%%] %%%CONSTANT@CATEGORY%%% at %%%NOW@0@%H:%M%%% - Count: %%%LOOPINC@1@1%%% - Value: %%%loop1.VALUE%%%
+%%%LOOP@END@loop1%%%
+
+# Global counters continue
+Global-A: %%%INC@10@5%%%
+Global-B: %%%INC@100@50%%%
+
+# Loop 2: LOOPINC + LOOPLIST + CONSTANT
+%%%LOOP@LOOP2@loop2%%%
+Item %%%INDEX%%%: %%%LOOPLIST@TAGS%%% | Inc: %%%LOOPINC@0.5@0.1%%% | Cat: %%%CONSTANT@CATEGORY%%%
+%%%LOOP@END@loop2%%%
+
+# Final global counters
+Global-A: %%%INC@10@5%%%
+Global-B: %%%INC@100@50%%%
+Global-C: %%%INC@1.0@0.5%%%

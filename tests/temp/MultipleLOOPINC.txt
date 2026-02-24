@@ -1,0 +1,57 @@
+# Test template with multiple LOOPINC counters in same loop
+# Test ID: gen_file_template_7
+# Generated at: 2026-02-20 15:08:29
+
+## Testing Multiple LOOPINC Counters within Single Loop
+
+### Loop with Multiple Independent LOOPINC Counters
+Record 0:
+  ID: Item-A
+  Counter Alpha: 10.0
+  Counter Beta: 100.0
+  Counter Gamma: 0.5
+  Counter Delta: 1000.0
+  Item: Product1
+  ----
+Record 1:
+  ID: Item-B
+  Counter Alpha: 11.5
+  Counter Beta: 125.0
+  Counter Gamma: 0.55
+  Counter Delta: 1100.0
+  Item: Product2
+  ----
+Record 2:
+  ID: Item-C
+  Counter Alpha: 13.0
+  Counter Beta: 150.0
+  Counter Gamma: 0.6
+  Counter Delta: 1200.0
+  Item: Product3
+  ----
+Record 3:
+  ID: Item-D
+  Counter Alpha: 14.5
+  Counter Beta: 175.0
+  Counter Gamma: 0.65
+  Counter Delta: 1300.0
+  Item: Product4
+  ----
+Record 4:
+  ID: Item-E
+  Counter Alpha: 16.0
+  Counter Beta: 200.0
+  Counter Gamma: 0.7
+  Counter Delta: 1400.0
+  Item: Product5
+  ----
+
+## Summary Information
+Total records processed: 5
+
+# Global INC counter (should work independently from LOOPINC)
+Global: 5.0
+Global: 5.1
+Global: 5.2
+
+# End of file

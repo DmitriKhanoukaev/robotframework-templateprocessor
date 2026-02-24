@@ -1,0 +1,54 @@
+# Test template for Date/Time edge cases
+# Test ID: %%%CONSTANT@ID%%%
+
+## Testing Date/Time Edge Cases
+
+### Zero Offsets
+NOW with zero offset: %%%NOW@0@%Y-%m-%d %H:%M:%S%%%
+MONTHDELTA with zero offset: %%%MONTHDELTA@0@%Y-%m-%d %H:%M:%S%%%
+
+### Large Positive Offsets
+NOW +365 days (1 year ahead): %%%NOW@365@%Y-%m-%d%%%
+NOW +730 days (2 years ahead): %%%NOW@730@%Y-%m-%d%%%
+MONTHDELTA +24 months (2 years ahead): %%%MONTHDELTA@24@%Y-%m-%d%%%
+MONTHDELTA +60 months (5 years ahead): %%%MONTHDELTA@60@%Y-%m%%%
+
+### Large Negative Offsets
+NOW -365 days (1 year ago): %%%NOW@-365@%Y-%m-%d%%%
+NOW -1095 days (3 years ago): %%%NOW@-1095@%Y-%m-%d%%%
+MONTHDELTA -24 months (2 years ago): %%%MONTHDELTA@-24@%Y-%m-%d%%%
+MONTHDELTA -36 months (3 years ago): %%%MONTHDELTA@-36@%Y-%m%%%
+
+### Various Date Format Strings
+ISO 8601 basic: %%%NOW@0@%Y%m%d%%%
+ISO 8601 extended: %%%NOW@0@%Y-%m-%dT%H:%M:%S%%%
+ISO 8601 with timezone: %%%NOW@0@%Y-%m-%dT%H:%M:%S+00:00%%%
+Unix timestamp style: %%%NOW@0@%Y%m%d%H%M%S%%%
+Human readable: %%%NOW@0@%A, %B %d, %Y%%%
+Date only: %%%NOW@0@%Y-%m-%d%%%
+Time only: %%%NOW@0@%H:%M:%S%%%
+Year and month: %%%NOW@0@%Y-%m%%%
+Month and day: %%%NOW@0@%m-%d%%%
+Custom format 1: %%%NOW@0@%d/%m/%Y %H:%M%%%
+Custom format 2: %%%NOW@0@%Y.%m.%d.%H.%M.%S%%%
+Custom format 3: %%%NOW@0@%B %d, %Y at %I:%M %p%%%
+
+### MONTHDELTA with Various Formats
+Month delta ISO: %%%MONTHDELTA@6@%Y-%m-%dT%H:%M:%S+01:00%%%
+Month delta basic: %%%MONTHDELTA@-3@%Y%m%d%%%
+Month delta date only: %%%MONTHDELTA@12@%Y-%m-%d%%%
+Month delta first of month: %%%MONTHDELTA@1@%Y-%m-01T00:00:00Z%%%
+
+### Combined Edge Cases
+Far future NOW: %%%NOW@3650@%Y-%m-%d%%% (10 years ahead)
+Far past NOW: %%%NOW@-3650@%Y-%m-%d%%% (10 years ago)
+Far future MONTHDELTA: %%%MONTHDELTA@120@%Y-%m%%% (10 years ahead)
+Far past MONTHDELTA: %%%MONTHDELTA@-120@%Y-%m%%% (10 years ago)
+
+### Boundary Testing
+Small positive offset: %%%NOW@1@%Y-%m-%d%%%
+Small negative offset: %%%NOW@-1@%Y-%m-%d%%%
+MONTHDELTA +1: %%%MONTHDELTA@1@%Y-%m-01%%%
+MONTHDELTA -1: %%%MONTHDELTA@-1@%Y-%m-01%%%
+
+# End of file

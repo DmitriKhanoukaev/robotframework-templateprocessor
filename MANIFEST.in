@@ -1,0 +1,19 @@
+# Include documentation and metadata
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include requirements.txt
+include requirements-dev.txt
+
+# Include all Python files
+recursive-include . *.py
+
+# Include test data as examples
+recursive-include tests/data *.txt
+recursive-include tests/temp *.txt
+
+# Exclude compiled Python files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store

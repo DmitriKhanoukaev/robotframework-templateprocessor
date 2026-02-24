@@ -1,0 +1,6 @@
+# Template for testing invalid loop input
+# Test ID: %%%CONSTANT@ID%%%
+
+%%%LOOP@INVALIDLOOP@testloop%%%
+Item %%%INDEX%%%: %%%testloop.VALUE%%%
+%%%LOOP@END@testloop%%%

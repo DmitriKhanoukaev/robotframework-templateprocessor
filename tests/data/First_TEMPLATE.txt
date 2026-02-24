@@ -1,0 +1,10 @@
+#
+# Hello
+#
+File id is %%%CONSTANT@ID%%%.
+You ran this test at %%%NOW@0@%Y.%m.%d %H:%M:%S%%% in %%%CONSTANT@ENV%%% environment.
+In %%%CONSTANT@ENV%%% in Generis you have %%%CONSTANT@TIMEENV%%% time environment.
+Note that 4 days ago time was percisely %%%NOW@-4@%Y.%m.%d %H:%M:%S%%%
+Note that 3 days ahead time will be percisely %%%NOW@3@%Y.%m.%d %H:%M:%S%%%
+Note that 2 months ago time was percisely %%%MONTHDELTA@-2@%Y.%m.%d %H:%M:%S%%%
+One month from now sharp time will be %%%MONTHDELTA@1@%Y.%m.%d %H:%M:%S%%%

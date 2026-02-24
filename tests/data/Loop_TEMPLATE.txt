@@ -1,0 +1,11 @@
+%%%LOOP@MYLOOPINPUT@myloop%%%
+%%%CONSTANT@NOTE%%%
+Loop index: %%%INDEX%%%
+Loop value: %%%myloop.VALUE%%%
+Loop increment: %%%LOOPINC@2.1@0.2%%%
+Loop list goes here: %%%LOOPLIST@MYLIST1%%%
+Loop list goes here: %%%LOOPLIST@MYLIST2%%%
+%%%LOOP@END@myloop%%%
+%%%INC@1.1@0.001%%% - will be replaced with 1.1
+%%%INC@1.1@0.001%%% - will be replaced with 1.101
+%%%INC@1.1@0.001%%% - will be replaced with 1.102

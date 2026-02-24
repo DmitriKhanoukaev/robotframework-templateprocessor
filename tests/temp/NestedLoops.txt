@@ -1,0 +1,30 @@
+# Nested Loops Test
+ID: gen_file_template_15
+
+# Outer loop with nested inner loop using INDEX
+Outer[0]: A
+Inner[0]: 1 in A - Count: 1.0 
+Inner[1]: 2 in A - Count: 2.0  
+Outer[1]: B
+Inner[0]: 1 in B - Count: 1.0 
+Inner[1]: 2 in B - Count: 2.0  
+
+
+# Outer loop with nested inner loop using inner.INDEX
+Outer[0]: A
+  Inner[0]: 1 in A - Count: 1.0
+  Inner[1]: 2 in A - Count: 2.0
+Outer[1]: B
+  Inner[0]: 1 in B - Count: 1.0
+  Inner[1]: 2 in B - Count: 2.0
+
+# Outer loop with nested inner loop using outer.INDEX
+Outer[0]: A
+  Inner[0]: 1 in A - Count: 1.0
+  Inner[0]: 2 in A - Count: 2.0
+Outer[1]: B
+  Inner[1]: 1 in B - Count: 1.0
+  Inner[1]: 2 in B - Count: 2.0
+
+
+# Done

@@ -1,0 +1,17 @@
+# Test template for %%%loopname.INDEX%%% feature
+Test ID: %%%CONSTANT@ID%%%
+
+## Single Loop - testing both INDEX and loopname.INDEX
+%%%LOOP@ITEMS@itemloop%%%
+Item %%%INDEX%%% (also %%%itemloop.INDEX%%%): %%%itemloop.VALUE%%%
+%%%LOOP@END@itemloop%%%
+
+## Nested Loops - testing access to outer loop index from inner loop
+%%%LOOP@OUTER@outerloop%%%
+=== Outer %%%INDEX%%% (named: %%%outerloop.INDEX%%%): %%%outerloop.VALUE%%% ===
+  %%%LOOP@INNER@innerloop%%%
+  - Inner %%%INDEX%%% (named: %%%innerloop.INDEX%%%) with outer %%%outerloop.INDEX%%% (%%%outerloop.VALUE%%%): %%%innerloop.VALUE%%%
+  %%%LOOP@END@innerloop%%%
+%%%LOOP@END@outerloop%%%
+
+# End

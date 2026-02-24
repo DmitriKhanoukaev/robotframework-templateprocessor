@@ -1,0 +1,37 @@
+# Test template for Loop edge cases
+# Test ID: %%%CONSTANT@ID%%%
+
+## Testing Loop Edge Cases
+
+### Test 1: Empty Loop (Zero Iterations)
+Loop with 0 iterations starts here:
+%%%LOOP@EMPTYLOOP@loop0%%%
+This should never appear: %%%INDEX%%% - %%%loop0.VALUE%%%
+%%%LOOP@END@loop0%%%
+Loop with 0 iterations ends here.
+
+### Test 2: Single Iteration Loop
+Single iteration loop:
+%%%LOOP@SINGLELOOP@loop1%%%
+Record %%%INDEX%%%: %%%loop1.VALUE%%% - Counter: %%%LOOPINC@1.0@0.5%%%
+%%%LOOP@END@loop1%%%
+
+### Test 3: Large Loop (100 iterations)
+Large loop with 100 iterations (showing first 10 chars per line):
+%%%LOOP@LARGELOOP@loop100%%%
+[%%%INDEX%%%]
+%%%LOOP@END@loop100%%%
+
+### Test 4: Loop with INDEXSHIFT (applies to all loops in template)
+Loop with INDEXSHIFT applied:
+%%%LOOP@SHIFTLOOP@loopshift%%%
+Index %%%INDEX%%% = Value %%%loopshift.VALUE%%%
+%%%LOOP@END@loopshift%%%
+
+### Test 5: Loop with LOOPLIST Edge Cases
+Loop with synchronized multiple LOOPLISTs:
+%%%LOOP@LISTLOOP@looplist%%%
+Position %%%INDEX%%% | ID: %%%looplist.VALUE%%% | Tag: %%%LOOPLIST@TAGS%%% | Status: %%%LOOPLIST@STATUS%%%
+%%%LOOP@END@looplist%%%
+
+# End of file
