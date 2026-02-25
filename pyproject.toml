@@ -48,14 +48,8 @@ dev = [
 ]
 
 [tool.setuptools]
-packages = ["TemplateProcessorLibrary"]
+py-modules = ["TemplateProcessorCore", "TemplateProcessorLibrary"]
 include-package-data = true
-
-[tool.setuptools.package-dir]
-"" = "."
-
-[tool.setuptools.package-data]
-TemplateProcessorLibrary = ["*.py"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
