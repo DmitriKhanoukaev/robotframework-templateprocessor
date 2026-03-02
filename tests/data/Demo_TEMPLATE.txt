@@ -1,0 +1,4 @@
+This file will have %%%CONSTANT@LINECOUNT%%% lines and it was generated %%%NOW@0@%Y-%m-%d%%%
+%%%LOOP@LINECOUNT@demolines%%%
+line index %%%INDEX%%%
+%%%LOOP@END@demolines%%%

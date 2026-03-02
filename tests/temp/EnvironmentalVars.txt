@@ -13,7 +13,7 @@ Config path: /etc/config/app.conf
 Service name: MyTestService
 
 ### Mixed Variables and Template Placeholders
-Generated at: 2026-02-20 15:08:29
+Generated at: 2026-02-27 12:26:18
 Service MyTestService in Production environment
 Config location: /etc/config/app.conf
 Test ID from constant: gen_file_template_13

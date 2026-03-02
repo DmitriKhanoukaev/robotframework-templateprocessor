@@ -6,8 +6,8 @@
 ################################################
 
 *** Settings ***
-Force Tags      disabled  internal
-Resource        ../TestFileGenerators.robot
+Test Tags       disabled  internal
+Library         ../TemplateProcessorLibrary.py
 Library         Collections
 Library         String
 Library         OperatingSystem
@@ -20,6 +20,19 @@ ${Data}         ${CURDIR}/data/
 ${Temppath}     ${CURDIR}/temp/
 
 *** Test Cases ***
+
+Small Demo Test Showing Concept Of Template Based Generation
+    [Tags]                              gen_file_demo  dkh
+    Generate File                           ${Temppath}DemoFile.txt
+    ...                                     ${Data}Demo_TEMPLATE.txt
+    ...                                     LINECOUNT=${3}
+    ...                                     INDEXSHIFT=1
+    File Should Exist                       ${Temppath}DemoFile.txt
+    ${content} =                            Get File  ${Temppath}DemoFile.txt
+    Should Match Regexp                     ${content}  ^This file will have 3 lines and it was generated \\d{4}-\\d{2}-\\d{2}
+    Should Contain                          ${content}  line index 1
+    Should Contain                          ${content}  line index 2
+    Should Contain                          ${content}  line index 3
 
 File Can Be Generated With Template
     [Tags]                              gen_file_template_1  dkh

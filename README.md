@@ -1,8 +1,26 @@
 # Robot Framework Template Processor
 
-A powerful Robot Framework library for generating test data files from templates with dynamic content. Perfect for creating test fixtures, mock data, and complex test scenarios with date/time manipulation, loops, and auto-incrementing values.
+A library for generating test data files from templates with dynamic content. Perfect for creating test fixtures, mock data, and complex test scenarios with date/time manipulation, loops, and auto-incrementing values.
+Can Be used with Robot Framework or with Python directly.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+## Concept Overview
+Use this tool to avoid heavy maintenance.
+
+```text
+                             Template file
+                                  |
+                                  v
+                              +-------------------+ 
+                              |  Template         |-> Output file
+Inputs (variables / lists) -> |  Processor        |
+                              +-------------------+
+```
+Template generation pattern is especially helpful to avoid maintenance of countless test files when the format changes or when the format needs updating. It allows you to maintain your template in one place instead of a number of pre-made files.
+
+Also, when big and long files are required, this generator is a way to go.
+
 
 ## Features
 
@@ -12,7 +30,7 @@ A powerful Robot Framework library for generating test data files from templates
 - **Nested Loops**: Support for complex nested loop structures
 - **Variable Substitution**: Replace placeholders with constant values
 - **Synchronized Lists**: Iterate multiple lists in parallel within loops
-- **Loop-Scoped Counters**: Independent counters that reset per iteration
+- **Loop-Scoped Counters**: Independent counters that increment per iteration
 
 ## Installation
 
@@ -23,7 +41,7 @@ pip install robotframework-templateprocessor
 Or install from source:
 
 ```bash
-git clone https://github.com/MarketSquare/robotframework-templateprocessor.git
+git clone https://github.com/DmitriKhanoukaev/robotframework-templateprocessor.git
 cd robotframework-templateprocessor
 pip install -e .
 ```
@@ -31,18 +49,38 @@ pip install -e .
 ## Quick Start
 
 ### Robot Framework Usage
+See the simple example below. For more examples, refer to:
+- templates in `./tests/data/`
+- generated results in `./tests/temp/`
+- the tests that generate them in `./tests/TemplateBasedGenerator.robot`
 
 ```robot
 *** Settings ***
 Library    TemplateProcessorLibrary.py
 
 *** Test Cases ***
-Generate Test Data File
-    ${timestamp}=    Generate File
-    ...    output_file=/tmp/output.txt
-    ...    template_file=template.txt
-    ...    ID=test123
-    ...    ENV=Production
+Small Demo Test Showing Concept Of Template Based Generation
+    [Tags]                              gen_file_demo  dkh
+    Generate File                           ${Temppath}DemoFile.txt
+    ...                                     ${Data}Demo_TEMPLATE.txt
+    ...                                     LINECOUNT=${3}
+    ...                                     INDEXSHIFT=1
+    File Should Exist                       ${Temppath}DemoFile.txt
+    ${content} =                            Get File  ${Temppath}DemoFile.txt
+```
+Where Demo_TEMPLATE.txt is:
+```
+This file will have %%%CONSTANT@LINECOUNT%%% lines and it was generated %%%NOW@0@%Y-%m-%d%%%
+%%%LOOP@LINECOUNT@demolines%%%
+line index %%%INDEX%%%
+%%%LOOP@END@demolines%%%
+```
+DemoFile.txt will be generated:
+```
+This file will have 3 lines and it was generated 2026-02-27
+line index 1
+line index 2
+line index 3
 ```
 
 ### Python Usage
@@ -320,7 +358,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ```bash
 # Clone the repository
-git clone https://github.com/MarketSquare/robotframework-templateprocessor.git
+git clone https://github.com/DmitriKhanoukaev/robotframework-templateprocessor.git
 cd robotframework-templateprocessor
 
 # Create virtual environment
@@ -342,10 +380,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/MarketSquare/robotframework-templateprocessor/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/MarketSquare/robotframework-templateprocessor/discussions)
+- **Issues**: [GitHub Issues](https://github.com/DmitriKhanoukaev/robotframework-templateprocessor/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/DmitriKhanoukaev/robotframework-templateprocessor/discussions)
 - **Robot Framework Slack**: `#tools` channel
 
 ## Credits
 
-Developed for the Robot Framework community by the MarketSquare organization.
+Developed for the Robot Framework community by the community and Dmitri Khanoukaev.
