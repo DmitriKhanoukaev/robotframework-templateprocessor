@@ -32,6 +32,11 @@ Also, when big and long files are required, this generator is a way to go.
 - **Synchronized Lists**: Iterate multiple lists in parallel within loops
 - **Loop-Scoped Counters**: Independent counters that increment per iteration
 
+## Features to come
+
+- **Random value**: Generate random value withing given limits
+- **Random list value**: Places random value from given list (e.g. list of allowed statuses)
+
 ## Installation
 
 ```bash
@@ -346,7 +351,7 @@ pytest tests/test_template_processor.py
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request. Or suggest a feature.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)

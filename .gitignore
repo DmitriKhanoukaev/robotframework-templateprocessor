@@ -69,7 +69,6 @@ selenium-screenshot-*.png
 *.swo
 *~
 .DS_Store
-Generators.code-workspace
 
 # Virtual environments
 venv/
